@@ -14,20 +14,20 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 3- Download the [argocd-repo-server.yaml](https://github.com/mahafdah/argocd-installation-guide/blob/main/argocd-repo-server.yaml) file and execute bellow.
 
 ```bash
-Kubectl patch deploy argocd-repo-server -n argocd --patch-file <your yml> # e.g. argocd-repo-server.yaml
+kubectl patch deploy argocd-repo-server -n argocd --patch-file <your yml> # e.g. argocd-repo-server.yaml
 ```
 
 ```bash
-Kubectl patch deploy argocd-repo-server -n argocd --patch-file argocd-repo-server.yaml
+kubectl patch deploy argocd-repo-server -n argocd --patch-file argocd-repo-server.yaml
 ```
 4- Download the [argocd-cm.yaml](https://github.com/mahafdah/argocd-installation-guide/blob/main/argocd-cm.yaml) configmap file and execute bellow.
 
 ```bash
-Kubectl patch configmap argocd-cm -n argocd --patch-file <your yml> # e.g. argocd-cm.yaml
+kubectl patch configmap argocd-cm -n argocd --patch-file <your yml> # e.g. argocd-cm.yaml
 ```
 
 ```bash
-Kubectl patch configmap argocd-cm -n argocd --patch-file argocd-cm.yaml
+kubectl patch configmap argocd-cm -n argocd --patch-file argocd-cm.yaml
 ```
 
 5- We need to create a secret yaml file as bellow or you can download it from here [argocd-vault-plugin-credentials.yaml](https://github.com/mahafdah/argocd-installation-guide/blob/main/argocd-vault-plugin-credentials.yaml) but follow the Notes to know how to get the values in stringData.

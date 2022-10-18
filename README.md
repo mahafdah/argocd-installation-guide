@@ -20,3 +20,12 @@ Kubectl patch deploy argocd-repo-server -n argocd --patch-file <your yml> # e.g.
 ```bash
 Kubectl patch deploy argocd-repo-server -n argocd --patch-file argocd-repo-server.yaml
 ```
+4- Download the [argocd-cm.yaml](https://github.com/mahafdah/argocd-installation-guide/blob/main/argocd-cm.yaml) configmap file and execute bellow.
+
+```bash
+Kubectl patch configmap argocd-cm -n argocd --patch-file <your yml> # e.g. argocd-cm.yaml
+```
+
+```bash
+Kubectl patch configmap argocd-cm -n argocd --patch-file argocd-cm.yaml
+```

@@ -1,1 +1,1 @@
-# argocd-installation-guide
+# Argocd Installation Guide

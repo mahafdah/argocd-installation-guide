@@ -1,1 +1,1 @@
-# Argocd Installation Guide
+# Argocd Installation Guide & AVault Plugin Configuration (AVP)

@@ -30,7 +30,22 @@ Kubectl patch configmap argocd-cm -n argocd --patch-file <your yml> # e.g. argoc
 Kubectl patch configmap argocd-cm -n argocd --patch-file argocd-cm.yaml
 ```
 
-5- Download the [argocd-vault-plugin-credentials.yaml](https://github.com/mahafdah/argocd-installation-guide/blob/main/argocd-vault-plugin-credentials.yaml) secret and execute bellow.
+5- We need to create a secret yaml file as bellow or you can download it from here [argocd-vault-plugin-credentials.yaml](https://github.com/mahafdah/argocd-installation-guide/blob/main/argocd-vault-plugin-credentials.yaml) but follow the Notes to know how to get the values in stringData.
+
+```bash
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-vault-plugin-credentials ## Make sure this matches the same envFrom you put in the argocd-repo-server deployment
+  namespace: argocd
+type: Opaque
+stringData:
+  VAULT_ADDR: http://vault.vault:8200 ## Your vault address You can find this by running the command 'env' inside your vault pod and find VAULT_CLUSTER_ADDR=
+  AVP_TYPE: vault
+  AVP_AUTH_TYPE: approle
+  AVP_ROLE_ID: role_id ## The role_id you copied earlier
+  AVP_SECRET_ID: secret_id ## The secret_id you copied earlier
+```
 
 ```bash
 kubectl apply -f argocd-vault-plugin-credentials.yaml

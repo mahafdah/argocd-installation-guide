@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    avp.kubernetes.io/path: "tiqan/data/secret1"
+    avp.kubernetes.io/path: "nginx-secret/data/config"
   labels:
     app: nginx
   name: nginx
   namespace: nginx
 spec:
-  replicas: <count>
+  replicas: <replicaCount>
   selector:
     matchLabels:
       app: nginx

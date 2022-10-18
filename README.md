@@ -53,8 +53,8 @@ kubectl apply -f argocd-vault-plugin-credentials.yaml
 
 Notes:
 - The value of **VAULT_ADDR** if you are deploy the Vault & ARgocd in same cluster put the value as ```http:/<vault-svc-name>/<vault-namespace>:<svc port>```
-- The value of AVP_AUTH_TYPE & AVP_AUTH_TYPE keep as is.
-- The value of AVP_ROLE_ID & AVP_SECRET_ID check the following [Dockument](https://github.com/mahafdah/vault-installation-guide) to know how get it.
+- The value of **AVP_AUTH_TYPE** & **AVP_AUTH_TYPE** keep as is.
+- The value of **AVP_ROLE_ID** & **AVP_SECRET_ID** check the following [Dockument](https://github.com/mahafdah/vault-installation-guide) to know how get it.
   
 
 

@@ -29,3 +29,9 @@ Kubectl patch configmap argocd-cm -n argocd --patch-file <your yml> # e.g. argoc
 ```bash
 Kubectl patch configmap argocd-cm -n argocd --patch-file argocd-cm.yaml
 ```
+
+5- Download the [argocd-vault-plugin-credentials.yaml](https://github.com/mahafdah/argocd-installation-guide/blob/main/argocd-vault-plugin-credentials.yaml) secret and execute bellow.
+
+```bash
+kubectl apply -f argocd-vault-plugin-credentials.yaml
+```

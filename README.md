@@ -62,6 +62,8 @@ Notes:
 kubectl delete --all pods --namespace=argocd
 ```
 
+# Congratulation go to your argocd UI and do the same pictures bellow.
+
 
 
 
